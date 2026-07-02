@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>鈴木祐介｜キャリア相談・転職支援 / AI導入・業務改善 / 採用支援</title>
+<meta name="description" content="個人向けにキャリア相談・転職支援、法人向けにAI導入・業務改善支援、採用支援を行っています。">
+<meta property="og:title" content="鈴木祐介">
+<meta property="og:description" content="個人向けにキャリア相談・転職支援、法人向けにAI導入・業務改善支援、採用支援を行っています。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f1efe8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css" rel="stylesheet">
+<style>
+:root{
+  --surface-2:#ffffff; --surface-1:#f7f6f1; --surface-0:#f1efe8;
+  --border:rgba(0,0,0,.10); --border-strong:rgba(0,0,0,.20);
+  --text-primary:#1c1c1a; --text-secondary:#5f5e5a; --text-muted:#8a8981;
+  --text-accent:#185fa5; --bg-accent:#e6f1fb;
+  --text-pro:#534ab7; --bg-pro:#eeedfe;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --surface-2:#2a2a26; --surface-1:#232320; --surface-0:#181816;
+    --border:rgba(255,255,255,.13); --border-strong:rgba(255,255,255,.24);
+    --text-primary:#ededea; --text-secondary:#b4b2a9; --text-muted:#8a8981;
+    --text-accent:#85b7eb; --bg-accent:#0c447c;
+    --text-pro:#afa9ec; --bg-pro:#3c3489;
+  }
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--surface-0);color:var(--text-primary);font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;-webkit-font-smoothing:antialiased;padding:20px 12px 32px;}
+h1,h2{font-weight:500;}
+.p{max-width:400px;margin:0 auto;background:var(--surface-2);border:0.5px solid var(--border);border-radius:14px;overflow:hidden;}
+.pad{padding:0 22px;}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;border-bottom:0.5px solid var(--border);}
+.bar .logo{font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--text-primary);}
+.hero{padding:22px 22px 18px;}
+.nm{font-size:20px;font-weight:500;letter-spacing:.02em;color:var(--text-primary);margin:0 0 3px;}
+.nmr{font-size:11.5px;letter-spacing:.12em;color:var(--text-muted);margin:0 0 16px;}
+.intro{font-size:14px;line-height:1.85;color:var(--text-secondary);margin:0 0 14px;}
+.tagwrap{display:flex;flex-wrap:wrap;gap:6px;}
+.htag{font-size:11px;letter-spacing:.03em;color:var(--text-secondary);border:0.5px solid var(--border);border-radius:20px;padding:4px 11px;}
+.nav{display:flex;gap:5px;padding:10px 16px;background:var(--surface-1);border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border);}
+.nav button{flex:1;font-size:12.5px;color:var(--text-secondary);background:var(--surface-2);border:0.5px solid var(--border);border-radius:20px;padding:7px 4px;cursor:pointer;letter-spacing:.01em;font-family:inherit;}
+.sec{padding:30px 0;border-top:0.5px solid var(--border);}
+.sec:first-child{border-top:none;}
+.eng{font-size:11px;letter-spacing:.22em;color:var(--text-accent);text-transform:uppercase;margin:0 0 8px;font-weight:500;}
+.st{font-size:17px;font-weight:500;color:var(--text-primary);margin:0 0 8px;letter-spacing:.02em;}
+.sd{font-size:12.5px;line-height:1.8;color:var(--text-secondary);margin:0 0 16px;}
+.card{border:0.5px solid var(--border);border-radius:12px;margin:0 0 8px;background:var(--surface-1);overflow:hidden;}
+.acch{display:flex;align-items:center;gap:11px;width:100%;background:none;border:none;padding:15px;cursor:pointer;text-align:left;font-family:inherit;}
+.acch .ai{font-size:19px;color:var(--text-primary);flex-shrink:0;}
+.acttext{flex:1;display:flex;flex-direction:column;gap:5px;}
+.acttext b{font-size:14.5px;font-weight:500;color:var(--text-primary);}
+.acttag{align-self:flex-start;font-size:10.5px;font-weight:500;letter-spacing:.06em;border-radius:4px;padding:2px 8px;}
+.tag-p{background:var(--bg-accent);color:var(--text-accent);}
+.tag-b{background:var(--bg-pro);color:var(--text-pro);}
+.chev{font-size:18px;color:var(--text-muted);transition:transform .2s;flex-shrink:0;}
+.card.open .chev{transform:rotate(180deg);}
+.accb{display:none;padding:0 15px 16px;}
+.card.open .accb{display:block;}
+.dl{font-size:11px;letter-spacing:.08em;color:var(--text-secondary);font-weight:500;margin:6px 0 8px;}
+.dl2{margin-top:16px;}
+.fl{list-style:none;padding:0;margin:0;}
+.fl li{font-size:13px;line-height:1.5;color:var(--text-primary);padding:7px 0 7px 20px;position:relative;border-top:0.5px solid var(--border);}
+.fl li:first-child{border-top:none;}
+.fl li::before{content:"";position:absolute;left:3px;top:13px;width:5px;height:5px;border-radius:50%;}
+.need li{color:var(--text-secondary);}
+.need li::before{background:var(--text-muted);}
+.give li::before{background:var(--text-accent);}
+.spec{display:flex;gap:8px;align-items:flex-start;font-size:12px;line-height:1.6;color:var(--text-secondary);background:var(--bg-accent);border-radius:8px;padding:11px 12px;margin:14px 0 0;}
+.spec i{color:var(--text-accent);font-size:15px;margin-top:1px;flex-shrink:0;}
+.spec b{color:var(--text-accent);font-weight:500;}
+.case{border:0.5px solid var(--border);border-radius:12px;padding:14px;margin:0 0 8px;background:var(--surface-1);}
+.cmeta{display:flex;align-items:center;gap:8px;margin:0 0 10px;flex-wrap:wrap;}
+.ctag{font-size:10.5px;font-weight:500;letter-spacing:.06em;border-radius:4px;padding:2px 8px;}
+.cwho{font-size:12.5px;color:var(--text-secondary);}
+.salary{display:flex;align-items:baseline;gap:9px;margin:0 0 9px;flex-wrap:wrap;}
+.sb{font-size:13px;color:var(--text-muted);}
+.salary i{font-size:14px;color:var(--text-muted);align-self:center;}
+.sa{font-size:19px;font-weight:500;color:var(--text-accent);letter-spacing:.01em;}
+.saj{font-size:12px;color:var(--text-accent);align-self:center;}
+.cdesc{font-size:12.5px;line-height:1.65;color:var(--text-secondary);margin:0;}
+.morebtn{width:100%;font-size:12.5px;color:var(--text-secondary);background:var(--surface-1);border:0.5px solid var(--border);border-radius:20px;padding:10px;cursor:pointer;letter-spacing:.02em;margin:4px 0 0;font-family:inherit;}
+.note{font-size:11px;color:var(--text-muted);margin:14px 0 0;line-height:1.7;}
+.prof{font-size:13px;line-height:1.95;color:var(--text-secondary);margin:0;}
+.footline{text-align:center;font-size:13px;line-height:1.85;color:var(--text-secondary);padding:26px 22px;border-top:0.5px solid var(--border);}
+.copy{text-align:center;font-size:10.5px;letter-spacing:.08em;color:var(--text-muted);padding:0 22px 20px;}
+</style>
+</head>
+<body>
+<div class="p">
+  <div class="bar"><div class="logo">鈴木祐介</div></div>
+
+  <div class="hero">
+    <p class="nm">鈴木 祐介</p>
+    <p class="nmr">すずき ゆうすけ</p>
+    <p class="intro">個人向けにキャリア相談・転職支援、法人向けにAI導入・業務改善支援、採用支援を行っています。</p>
+    <div class="tagwrap">
+      <span class="htag">キャリア相談・転職</span>
+      <span class="htag">AI導入・業務改善</span>
+      <span class="htag">若手採用</span>
+    </div>
+  </div>
+
+  <div class="nav">
+    <button onclick="jump('service')">できること</button>
+    <button onclick="jump('works')">支援事例</button>
+    <button onclick="jump('profile')">経歴</button>
+  </div>
+
+  <div class="pad">
+    <div class="sec" id="service">
+      <p class="eng">Service</p>
+      <h2 class="st">できること</h2>
+      <p class="sd">気になる領域をタップすると詳しく開きます。</p>
+
+      <div class="card open">
+        <button class="acch" onclick="tog(this)">
+          <i class="ti ti-compass ai"></i>
+          <span class="acttext"><b>キャリア相談・転職支援</b><span class="acttag tag-p">個人向け</span></span>
+          <i class="ti ti-chevron-down chev"></i>
+        </button>
+        <div class="accb">
+          <p class="dl">こんな方に</p>
+          <ul class="fl need">
+            <li>エージェント疲れで、進め方に迷っている</li>
+            <li>目先の求人より、中長期で考えたい</li>
+            <li>次こそ確実に受かりたい／年収も上げたい</li>
+          </ul>
+          <p class="dl dl2">提供内容</p>
+          <ul class="fl give">
+            <li>中長期を踏まえたキャリアカウンセリング（志向・方向性の整理）</li>
+            <li>これまでの経験・強みの棚卸し・言語化支援</li>
+            <li>想定問答の作り込みから模擬面接まで、個社ごとの徹底的な面接対策</li>
+            <li>入社後の立ち上がり最大化に向けたスキルアップ支援（営業ロープレ・企画など）</li>
+          </ul>
+          <p class="spec"><i class="ti ti-star"></i><span>特に、<b>経験の言語化 → 面接で伝わる言葉への&quot;翻訳&quot;</b>に強みがあります。</span></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <button class="acch" onclick="tog(this)">
+          <i class="ti ti-robot ai"></i>
+          <span class="acttext"><b>AI導入・業務改善支援</b><span class="acttag tag-b">法人向け</span></span>
+          <i class="ti ti-chevron-down chev"></i>
+        </button>
+        <div class="accb">
+          <p class="dl">こんな会社に</p>
+          <ul class="fl need">
+            <li>AIを使いたいが、何から始めるか分からない</li>
+            <li>属人化・手作業を整理したい</li>
+            <li>一度試したが、定着しなかった</li>
+          </ul>
+          <p class="dl dl2">提供内容</p>
+          <ul class="fl give">
+            <li>業務プロセスの棚卸し・改善提案</li>
+            <li>生成AI（Claude など）の導入・活用支援</li>
+            <li>現場で使えるプロンプト設計・運用の仕組みづくり</li>
+          </ul>
+          <p class="spec"><i class="ti ti-map-pin"></i><span>特に <b>建設・医療</b> など、業務理解が重い業界に強みがあります。</span></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <button class="acch" onclick="tog(this)">
+          <i class="ti ti-users ai"></i>
+          <span class="acttext"><b>採用支援</b><span class="acttag tag-b">法人向け</span></span>
+          <i class="ti ti-chevron-down chev"></i>
+        </button>
+        <div class="accb">
+          <p class="dl">こんな会社に</p>
+          <ul class="fl need">
+            <li>若手・営業採用、何から手をつけるか分からない</li>
+            <li>求人を出しても応募が来ない</li>
+            <li>内定辞退・選考の見極めに課題がある</li>
+          </ul>
+          <p class="dl dl2">提供内容</p>
+          <ul class="fl give">
+            <li>採用要件・求める人物像の整理／言語化</li>
+            <li>求人票・スカウト文面の作成・改善</li>
+            <li>選考フロー・面接評価基準の設計</li>
+            <li>カジュアル面談〜内定後フォローの改善</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec" id="works">
+      <p class="eng">Works</p>
+      <h2 class="st">支援事例</h2>
+      <p class="sd">これまでの相談・支援の一部です。</p>
+
+      <div class="case">
+        <div class="cmeta"><span class="ctag tag-p">転職支援</span><span class="cwho">26歳・家電量販店 → WEBメディア営業</span></div>
+        <div class="salary"><span class="sb">年収 390万</span><i class="ti ti-arrow-right"></i><span class="sa">450万</span><span class="saj">（+60万）</span></div>
+        <p class="cdesc">接客での提案経験を&quot;営業の強み&quot;として言語化。志望動機と面接での伝え方まで作り込み、未経験のWEBメディア営業へ内定。</p>
+      </div>
+
+      <div class="case">
+        <div class="cmeta"><span class="ctag tag-p">転職支援</span><span class="cwho">28歳・メーカー法人営業 → SaaS営業</span></div>
+        <div class="salary"><span class="sb">年収 450万</span><i class="ti ti-arrow-right"></i><span class="sa">620万</span><span class="saj">（+170万）</span></div>
+        <p class="cdesc">大手エージェントでは言語化しきれなかった強みを棚卸し。想定問答を一問ずつ作り込み、模擬面接を繰り返して選考を突破。年収に加え、フレックス勤務も獲得。</p>
+      </div>
+
+      <div class="case">
+        <div class="cmeta"><span class="ctag tag-p">転職支援</span><span class="cwho">30歳・営業 → 企画職へ</span></div>
+        <div class="salary"><span class="sb">年収 520万</span><i class="ti ti-arrow-right"></i><span class="sa">720万</span><span class="saj">（+200万）</span></div>
+        <p class="cdesc">中長期の志向を言語化し、未経験職種への&quot;接続&quot;を面接で設計。想定質問への回答を徹底的に準備し、年収を大きく上げて転職を実現。</p>
+      </div>
+
+      <div id="morecases" style="display:none">
+        <div class="case">
+          <div class="cmeta"><span class="ctag tag-b">AI導入</span><span class="cwho">建設業・請求書〜支払業務の効率化</span></div>
+          <p class="cdesc">建設会社の請求書の受領から支払いまわりの定型業務を棚卸しし、生成AIで確認・データ入力を半自動化。手作業と転記ミスを削減。</p>
+        </div>
+        <div class="case">
+          <div class="cmeta"><span class="ctag tag-b">業務改善</span><span class="cwho">飲食店（スナック）</span></div>
+          <p class="cdesc">ドリンクのカウントと会計をタブレットで一元管理する簡易システムを導入。会計時の計算ミスをなくし、従業員への報酬計算の手間も効率化。</p>
+        </div>
+      </div>
+      <button class="morebtn" id="morebtn" onclick="showmore()">AI・業務改善の事例も見る（+2件）</button>
+
+      <p class="note">※プライバシー保護のため、内容をぼかした事例です。数値は個別の状況により異なります。</p>
+    </div>
+
+    <div class="sec" id="profile">
+      <p class="eng">Profile</p>
+      <h2 class="st">経歴</h2>
+      <p class="prof">新卒でプライム上場企業に入社し、法人営業に従事。その後、医療・建設という専門性の高い領域のSaaS企業へ移り、営業から新規事業の立ち上げ、プロダクトマネジメントまでを担当。採用にも携わりながら、現場の課題から事業・プロダクトの意思決定までを一貫して経験。<br><br>現在は、20〜30代を中心としたキャリア相談・転職支援、生成AIを活用した業務改善、若手採用の支援に従事しています。</p>
+    </div>
+  </div>
+
+  <div class="footline">ご相談・お問い合わせは、LINEからお願いします。</div>
+  <div class="copy">© 2026 Suzuki Yusuke</div>
+</div>
+
+<script>
+function tog(btn){btn.parentElement.classList.toggle('open');}
+function jump(id){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+function showmore(){document.getElementById('morecases').style.display='block';document.getElementById('morebtn').style.display='none';}
+</script>
+</body>
+</html>
